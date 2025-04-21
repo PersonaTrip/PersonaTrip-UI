@@ -1,7 +1,7 @@
 // 全局配置文件
 
 // API基础URL
-export const API_BASE_URL = 'http://127.0.0.1:8080';
+export const API_BASE_URL = 'http://14.103.232.255:32601';
 
 // 其他全局配置
 export const APP_NAME = 'PersonaTrip';
