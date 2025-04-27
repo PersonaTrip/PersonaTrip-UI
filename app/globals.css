@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 201 100% 50%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 201 100% 50%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 201 100% 50%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 201 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* 自定义样式 */
+.destination-card {
+  @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+}
+
+.destination-card-beijing {
+  @apply bg-gradient-to-br from-travel-blue/10 to-travel-teal/10 border-travel-blue/20;
+}
+
+.destination-card-shanghai {
+  @apply bg-gradient-to-br from-travel-purple/10 to-travel-pink/10 border-travel-purple/20;
+}
+
+.destination-card-chengdu {
+  @apply bg-gradient-to-br from-travel-green/10 to-travel-teal/10 border-travel-green/20;
+}
+
+.destination-card-sanya {
+  @apply bg-gradient-to-br from-travel-orange/10 to-travel-yellow/10 border-travel-orange/20;
+}
+
+.nav-button {
+  @apply transition-all duration-200 hover:bg-accent;
+}
+
+.nav-button.active {
+  @apply bg-primary/10 text-primary;
+}
+
+.chat-item {
+  @apply transition-all duration-200 hover:bg-accent;
+}
+
+.chat-item.unread {
+  @apply bg-primary/5;
+}
+
+.badge-travel {
+  @apply bg-travel-blue/10 text-travel-blue hover:bg-travel-blue/20 transition-colors;
+}
+
+.badge-food {
+  @apply bg-travel-orange/10 text-travel-orange hover:bg-travel-orange/20 transition-colors;
+}
+
+.badge-nature {
+  @apply bg-travel-green/10 text-travel-green hover:bg-travel-green/20 transition-colors;
+}
+
+.badge-culture {
+  @apply bg-travel-purple/10 text-travel-purple hover:bg-travel-purple/20 transition-colors;
+}
+
+.badge-shopping {
+  @apply bg-travel-pink/10 text-travel-pink hover:bg-travel-pink/20 transition-colors;
+}
+
+.badge-relax {
+  @apply bg-travel-teal/10 text-travel-teal hover:bg-travel-teal/20 transition-colors;
+}
+
+.badge-adventure {
+  @apply bg-travel-yellow/10 text-travel-yellow hover:bg-travel-yellow/20 transition-colors;
+}
+
+.itinerary-upcoming {
+  @apply bg-travel-blue text-white;
+}
+
+.itinerary-ongoing {
+  @apply bg-travel-green text-white;
+}
+
+.itinerary-completed {
+  @apply bg-muted text-muted-foreground;
+}
+
+.message-user {
+  @apply bg-travel-blue text-white;
+}
+
+.message-assistant {
+  @apply bg-muted;
+}
+
+.header-gradient {
+  @apply bg-gradient-travel text-white;
+}
